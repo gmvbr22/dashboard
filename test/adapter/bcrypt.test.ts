@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import {Container} from 'inversify';
-import {PasswordHasher} from '../../application';
-import {BcryptAdapter} from './bcrypt';
+import {PasswordHasher} from '../../src/application';
+import {BcryptAdapter} from '../../src/infrastructure';
 
 describe('Test BcryptAdapter', () => {
   test('expect interface PasswordHasher', async () => {
