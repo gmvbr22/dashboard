@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import {Container} from 'inversify';
 import {PasswordHasher} from './application';
 import {BcryptAdapter} from './infrastructure';
