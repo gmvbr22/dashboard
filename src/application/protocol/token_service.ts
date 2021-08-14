@@ -10,7 +10,7 @@ export interface TokenResult {
   /**
    * Expiração do token em unix epoch
    */
-  expire_in: string;
+  expire_in: number;
 }
 
 /**
