@@ -1,8 +1,14 @@
+import 'reflect-metadata';
+import {Container} from 'inversify';
+import {PasswordHasher} from '../../application';
 import {BcryptAdapter} from './bcrypt';
 
 describe('Test BcryptAdapter', () => {
   test('expect interface PasswordHasher', async () => {
-    const adapter = new BcryptAdapter(10);
+    const container = new Container();
+    container.bind(PasswordHasher).toConstantValue(new BcryptAdapter(11));
+
+    const adapter = container.get(PasswordHasher);
 
     const hash1 = await adapter.hashPassword('password');
     const hash2 = await adapter.hashPassword('password');

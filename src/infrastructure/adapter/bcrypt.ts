@@ -1,3 +1,4 @@
+import {injectable} from 'inversify';
 import {hash, compare} from 'bcrypt';
 import {PasswordHasher} from '../../application';
 
@@ -7,6 +8,7 @@ import {PasswordHasher} from '../../application';
  * Esse adaptador implementa **PasswordHasher**
  * com métodos do bcrypt
  */
+@injectable()
 export class BcryptAdapter implements PasswordHasher {
   /**
    * @param salt Número de rounds do bcrypt

@@ -1,6 +1,9 @@
+import {injectable} from 'inversify';
+
 /**
  * Abstração que implementa o Hash da senha
  */
+@injectable()
 export abstract class PasswordHasher {
   /**
    * Gerar o hash da senha
